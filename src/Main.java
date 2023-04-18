@@ -13,9 +13,9 @@ public class Main {
     checkYear(year);
     }
     public static void checkYear (int year) {
-        if (year % 4 == 0 && year % 100 != 1 || year % 400 ==0) {
+        if (year % 4 == 0 && year % 100 != 0 || year % 400 ==0) {
             System.out.println("Год високосный.");
-        } else if (year % 4 != 0 && year % 100 == 0 || year % 400 != 0) {
+        } else  {
             System.out.println("It is not a leap year.");
         }
 
@@ -49,9 +49,9 @@ public class Main {
     public static int deliver (int deliveryDistance) {
         if (deliveryDistance <= 20) {
             return 1;
-        } else if (deliveryDistance > 20 && deliveryDistance < 60) {
+        } else if (deliveryDistance > 20 && deliveryDistance <= 60) {
             return 2;
-        } else if (deliveryDistance >60 && deliveryDistance < 100) {
+        } else if (deliveryDistance >60 && deliveryDistance <= 100) {
             return 3;
         } else {
             return -1;
